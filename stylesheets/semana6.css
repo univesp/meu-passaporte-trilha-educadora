@@ -1,0 +1,33 @@
+:root {
+  /* Cores principais */
+  --cor-primaria: #ED6D02;          
+  --cor-branca: #FFF;
+}
+
+.bullet-item,
+.semana-id,
+.custom-list li::before,
+.info-box,
+.nav-tab.active-pill,
+.conteudo-casa-6 .carimbo-banner {
+  background-color: var(--cor-primaria);
+}
+
+nav .logo img, 
+nav .nav-link, 
+nav .nav-link:focus, 
+nav .nav-link:hover, 
+nav .nav-link[aria-expanded="true"],
+footer, 
+footer .sharing i {
+  background-color: var(--cor-primaria) !important;
+  color: var(--cor-branca);
+}
+
+footer .cred-rea>div:not(:first-child) {
+  border-left-color: var(--cor-branca);
+}
+
+footer .aval-rea .btn-secondary {
+  border-color: var(--cor-branca);
+}
