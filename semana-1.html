@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:image" content="assets/fb-share.png">
+  <meta name="author" content="Univesp">
+
+  <meta name="description" property="og:description"
+  content="">
+
+  <title>Univesp | Meu Passaporte da Trilha Educadora</title>
+
+  <link rel="shortcut icon" href="https://apps.univesp.br/common/favicon.ico" type="image/x-icon"/>
+
+  <!-- Arquivos Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+
+  <!-- Ícones por Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <!-- Ícones por Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Tipografia institucional por Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Inter:wght@200;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Compartilhamento por jsSocials -->
+  <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.css" />
+  <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials-theme-minima.css" />
+
+  <!-- Animate CSS. Descomente se for utilizar. Caso contrário, remova. -->
+  <!-- <link rel="stylesheet" href="https://apps.univesp.br/common/animate.css"> -->
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="https://apps.univesp.br/common/rea-geral-2.1.css">
+  <!-- <link rel="stylesheet" href="../common/rea-geral-2.1.css">   -->
+  <link rel="stylesheet" href="stylesheets/nav_footer.css">
+  <link rel="stylesheet" href="stylesheets/global.css">
+  <link rel="stylesheet" href="stylesheets/semanas.css">
+  <link rel="stylesheet" href="stylesheets/semana1.css">
+
+</head>
+
+<body class="d-flex flex-column">
+
+  <div id="loading-screen" style="
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #212121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+  ">
+    <div style="text-align: center; color: white;">
+      <img src="assets/semana1-loading.svg" alt="Lumi" style="width: 110px; animation: pulse 1s infinite;">
+      <p style="margin-top: 20px; font-family: 'Nunito', sans-serif; font-size: 20px;">Carregando sua jornada...</p>
+    </div>
+  </div>
+
+  <style>
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+
+  <!-- Utilizar essa DIV caso o REA não se adapte a todos os tamanhos de tela -->
+  <!-- <div class="esconder-tela-pequena"> -->
+
+  <!-- Menu -->
+  <!--///////////////////////////////////////////////////////////////
+  Classe para nav
+  - padrão => header estático
+  - class="header-dinamico" => header possui posição fixa e é mostrado apenas quando a página está no topo (necessário ajustar padding ou margin superior e inferior do main).
+  //////////////////////////////////////////////////////////////////-->
+  <!-- <nav class="header-dinamico"> -->
+    <!--
+  <nav id="navHeaderPaginaInicial">
+    <div class="container">
+      
+      <div class="logo">
+        <a class="pularNavegacao" href="#conteudoPrincipal">Pular para Conteúdo Principal</a>
+        <a href="https://univesp.br/" target="_blank">
+          <img src="https://apps.univesp.br/common/colorida-positiva.svg" alt="Link para site institucional. Logotipo da universidade formado pela palavra Univesp, sendo a letra V estilizada.">
+          
+        </a>
+      </div>
+      
+      <ul class="nav justify-content-end">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <i class="material-icons" aria-label="Opções de Compartilhamento">share</i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <div class="sharing"></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  -->
+
+  <!-- Conteúdo -->
+  <main id="conteudoPrincipal">
+    <!-- Seu conteúdo -->
+
+    <div class="titulo-semana-container">
+
+      <div class="semana-titulo-container">
+        <div class="semana-id">
+          <!-- Trocar para a semana correspondente -->
+          <span>Semana 1</span>
+        </div>
+        <div class="semana-titulo">
+          <span><b>Fundamentos da Educação Não Formal /</b> Microexpedição de Conceitos</span>
+        </div>
+      </div>
+
+      <div class="bullets">
+        <div class="bullet-item"></div>
+        <div class="bullet-item"></div>
+        <div class="bullet-item"></div>
+        <div class="bullet-item"></div>
+        <div class="bullet-item"></div>
+        <div class="bullet-item"></div>
+      </div>
+
+    </div>
+
+    <div class="container">
+
+      <div class="semana-content-box" id="semana1">
+
+        <!-- Headers - Comum a Todas as Semanas -->
+        <div class="header-titles" data-casa="1">
+          <h3>Semana 1 - Casa 1</h3>
+          <h1>Escolha seu destino</h1>
+        </div>
+
+        <div class="header-titles" data-casa="2" style="display: none;">
+          <h3>Semana 1 - Casa 2</h3>
+          <h1>Passaporte</h1>
+        </div>
+
+        <div class="header-titles" data-casa="3" style="display: none;">
+          <h3>Semana 1 - Casa 3</h3>
+          <h1>Atividade do Passaporte</h1>
+        </div>
+
+        <div class="header-titles" data-casa="4" style="display: none;">
+          <h3>Semana 1 - Casa 4</h3>
+          <h1>Aprendizado</h1>
+        </div>
+
+        <div class="header-titles" data-casa="5" style="display: none;">
+          <h3>Semana 1 - Casa 5</h3>
+          <h1>Aplicação Prática</h1>
+        </div>
+
+        <div class="header-titles" data-casa="6" style="display: none;">
+          
+        </div>
+
+        <nav class="nav-tabs">
+          <div  class="nav-tab active-pill"><img src="assets/ico-destino.png" alt="Ícone"> Escolha seu destino</div>
+          <div class="nav-tab"><img src="assets/ico-passaporte.png" alt="Ícone"> Passaporte</div>
+          <div class="nav-tab"><img src="assets/ico-atividade.png" alt="Ícone"> Atividade</div>
+          <div class="nav-tab"><img src="assets/ico-aprendizado.png" alt="Ícone"> Aprendizado</div>
+          <div class="nav-tab"><img src="assets/ico-aplicacao.png" alt="Ícone"> Aplicação Prática</div>
+        </nav>
+
+        <!-- CONTEUDO DAS CASAS -->
+
+        <!-- CASA 1 -->
+        <section class="content-card conteudo-casa-1">
+          <p>Defina o espaço e o modo da visita (presencial ou virtual).</p>
+    
+          <h4>Sugestões de espaços presenciais:</h4>
+          <ul class="custom-list">
+            <li>Biblioteca pública ou comunitária</li>
+            <li>Centro comunitário / CRAS</li>
+            <li>Feira livre ou feira cultural</li>
+            <li>Conselho de bairro ou associação comunitária</li>
+            <li>Museu ou centro cultural local</li>
+          </ul>
+    
+          <h4>Alternativas virtuais</h4>
+          <ul class="custom-list">
+            <li>Acervos digitais municipais ou estaduais</li>
+            <li>Exposições online (Google Arts & Culture – coleções educativas)</li>
+            <li>Vídeos institucionais sobre ações socioeducativas em territórios</li>
+            <li>Visitas virtuais mediadas por museus ou centros culturais</li>
+          </ul>
+    
+          <p class="bold-paragraph">Caso a visita seja virtual, explore o site indicado como se fosse o próprio território educativo, observando suas linguagens, formas de mediação e possibilidades de aprendizagem.</p>
+    
+          <div class="link-pills">
+            <a href="#" class="link-pill"><img src="assets/ico-link.png" alt="Link"> Hemeroteca Digital - Biblioteca Nacional</a>
+            <a href="#" class="link-pill"><img src="assets/ico-link.png" alt="Link"> BN Digital - Acervos</a>
+            <a href="#" class="link-pill"><img src="assets/ico-link.png" alt="Link"> Câmara dos Deputados - Participe</a>
+          </div>
+    
+          <div class="info-box">
+            <h5>Orientação</h5>
+            <p>Escolha um espaço que faça parte do cotidiano das pessoas e observe como ele se organiza como lugar de aprendizagem, mesmo sem assumir a forma escolar.</p>
+          </div>
+        </section>
+
+        <div class="bottom-action conteudo-casa-1">
+          <button class="btn-outline" style="display: none;">Voltar</button>
+          <button class="btn-outline">Continuar para o Passaporte</button>
+        </div>
+
+        <!-- CASA 2 -->
+        <section class="content-card conteudo-casa-2">
+          <p class="page-intro-text">Preencha no seu <strong>Passaporte da Trilha Educadora</strong></p>
+          <form id="passaporteForm" class="form-container">
+            
+            <div class="form-group">
+              <label for="estudanteNome" class="form-label">Nome do estudante</label>
+              <input type="text" id="estudanteNome" class="form-input" placeholder="Seu nome completo">
+            </div>
+
+            <div class="form-group">
+              <label for="espacoVisitado" class="form-label">Espaço visitado</label>
+              <input type="text" id="espacoVisitado" class="form-input" placeholder="Nome do local visitado">
+            </div>
+
+            <div class="form-group">
+              <label for="modalidadeSelecao" class="form-label">Modalidade</label>
+              <select id="modalidadeSelecao" class="form-select">
+                <option value="" disabled selected>Selecione...</option>
+                <option value="presencial">Presencial</option>
+                <option value="virtual">Virtual</option>
+              </select>
+            </div>
+
+            <div class="form-group with-icon">
+              <label for="checkinData" class="form-label">Check-in (Data da visita)</label>
+              <div style="position: relative;">
+                <input type="date" id="checkinData" class="form-input">
+                </div>
+            </div>
+
+            <div class="form-group with-icon">
+              <label class="form-label">
+                <img src="assets/ico-camera.png" alt="Câmera"> Foto ou imagem do espaço
+              </label>
+              
+              <div id="imageUploadContainer">
+                <img id="imagePreview" src="" alt="Pré-visualização da foto do espaço">
+                
+                <div class="upload-placeholder" id="uploadPlaceholder">
+                  <img src="assets/ico-camera.png" alt="Adicionar imagem">
+                  <span>Clique para adicionar imagem</span>
+                </div>
+              </div>
+
+              <!-- Botão para remover imagem -->
+              <button type="button" id="removeImageBtn" class="btn-remove-image" style="display: none;">
+                <i class="fas fa-trash-alt"></i> Remover imagem
+              </button>
+              
+              <input type="file" id="imageUpload" accept="image/*">
+            </div>
+
+            <div class="form-group">
+              <label for="localDescricao" class="form-label">Descrição breve do local</label>
+              <textarea id="localDescricao" class="form-textarea" placeholder="O que é, para quem existe, o que acontece ali..."></textarea>
+            </div>
+
+          </form>
+        </section>
+
+        <div class="bottom-action conteudo-casa-2" style="display: none;">
+          <button class="btn-outline-thick">Voltar</button>
+          <button type="button" id="continuarBtn" class="btn-outline-thick">Continuar</button>
+        </div>
+
+        <!-- CASA 3 -->
+        <section class="content-card conteudo-casa-3" style="display: none;">
+          <div class="info-box">
+            <p>Nem todo lugar que educa parece uma escola. Antes de escrever, caminhe com atenção e observe como as pessoas aprendem aqui.</p>
+          </div>
+
+          <h4 style="margin-bottom: 0;">Pistas de observação</h4>
+          <p style="margin-bottom: 15px;">Durante a visita, observe situações do espaço escolhido e identifique:</p>
+          <ul class="custom-list">
+            <li>Quem aprende e quem ensina (papéis explícitos ou implícitos);</li>
+            <li>Que tipos de saber circulam (cultural, social, técnico, científico, comunitário);</li>
+            <li>Se há intencionalidade educativa ou se a aprendizagem emerge do convívio;</li>
+            <li>Que mediações estão presentes (pessoas, objetos, regras, linguagem, tecnologias).</li>
+          </ul>
+
+          <h4 style="margin-bottom: 0;">Tarefa</h4>
+          <p style="margin-bottom: 15px;">Registre três experiências de aprendizagem observadas no espaço (ou no recurso virtual) e analise cada uma considerando:</p>
+          <ul class="custom-list">
+            <li>a intencionalidade (planejada ou emergente);</li>
+            <li>as formas de mediação envolvidas;</li>
+            <li>o público participante.</li>
+          </ul>
+
+          <h4 style="margin-bottom: 0;">Pergunta de reflexão</h4>
+          <p>Que critérios ajudam a reconhecer uma prática educativa fora da escola sem reduzi-la a uma simples “atividade” ou “evento”?</p>
+
+          <form id="atividadeForm" class="form-container">
+        
+            <div class="form-group">
+              <label for="experiencia1Descricao" class="form-label">
+                <img src="assets/ico-atv.png" alt="Ícone" class="inline-icon"> Experiência 1
+              </label>
+              <textarea id="experiencia1Descricao" class="form-textarea" placeholder="Descreva a experiência e analise: intencionalidade, mediação, público..."></textarea>
+            </div>
+    
+            <div class="form-group">
+              <label for="experiencia2Descricao" class="form-label">
+                <img src="assets/ico-atv.png" alt="Ícone" class="inline-icon"> Experiência 2
+              </label>
+              <textarea id="experiencia2Descricao" class="form-textarea" placeholder="Descreva a experiência e analise: intencionalidade, mediação, público..."></textarea>
+            </div>
+    
+            <div class="form-group">
+              <label for="experiencia3Descricao" class="form-label">
+                <img src="assets/ico-atv.png" alt="Ícone" class="inline-icon"> Experiência 3
+              </label>
+              <textarea id="experiencia3Descricao" class="form-textarea" placeholder="Descreva a experiência e analise: intencionalidade, mediação, público..."></textarea>
+            </div>
+    
+          </form>
+
+          <div style="margin-top: 30px;" class="info-box">
+            <p>Compare as experiências que você observou. Todas ensinam do mesmo modo? O que muda quando a aprendizagem nasce da convivência ou do fazer junto?</p>
+          </div>
+        </section>
+
+        <div class="bottom-action conteudo-casa-3" style="display: none;">
+          <button class="btn-outline-thick">Voltar</button>
+          <button class="btn-outline-thick">Continuar</button>
+        </div>
+
+        <!-- CASA 4 -->
+        <section class="content-card conteudo-casa-4" style="display: none;">
+          <div class="content-title">O que aprendi com a visita?</div>
+          <p>Escreva, com suas palavras (3 a 5 linhas):</p>
+
+          <ul class="custom-list">
+            <li>o que você aprendeu sobre educação não formal a partir da visita;</li>
+            <li>como essa experiência dialoga com os estudos da Semana 1.</li>
+          </ul>
+
+          <p>Você pode complementar com:</p>
+          <ul class="custom-list">
+            <li>esquema,</li>
+            <li>desenho,</li>
+            <li>mapa conceitual,</li>
+            <li>setas ou palavras-chave.</li>
+          </ul>
+
+          <textarea id="aprendizadoReflexao" class="form-textarea" placeholder="Reflita sobre seus aprendizados..."></textarea>
+        </section>
+
+        <div class="bottom-action conteudo-casa-4" style="display: none;">
+          <button class="btn-outline-thick">Voltar</button>
+          <button class="btn-outline-thick">Continuar</button>
+        </div>
+
+        <!-- CASA 5 -->
+        <section class="content-card conteudo-casa-5" style="display: none;">
+          <div class="content-title">Como essa experiência pode inspirar a escola?</div>
+          <p>Reflita sobre possibilidades pedagógicas para a Educação Infantil ou o Ensino Fundamental I, a partir do espaço observado, como por exemplo:</p>
+
+          <div class="grey-box">
+            <strong>Considere:</strong>
+            <ul>
+              <li>Rodas de conversa</li>
+              <li>Projetos com o território</li>
+              <li>Visitas mediadas</li>
+              <li>Atividades de observação guiada</li>
+              <li>Registros coletivos</li>
+              <li>Articulação com famílias e comunidade</li>
+            </ul>
+          </div>
+
+          <textarea style="margin-top: 0;" id="aplicacaoIdeias" class="form-textarea" placeholder="Registre suas ideias, mesmo em forma de rascunho..."></textarea>
+
+          <div style="margin-top: 20px;" class="info-box">
+            <strong>Trilha pergunta:</strong>
+            <p>Que parte dessa experiência você levaria para sua futura turma?</p>
+          </div>
+        </section>
+
+        <div class="bottom-action conteudo-casa-5" style="display: none;">
+          <button class="btn-outline-thick">Voltar</button>
+          <button class="btn-outline-thick">Concluir Trilha</button>
+        </div>
+
+        <!-- CASA 6 (Conclusão) -->
+        <section class="content-card conteudo-casa-6" style="display: none;">
+          <img src="assets/semana1b.png" alt="Ícone de mapa concluído" class="success-icon">
+
+          <h1 class="title-parabens">Parabéns!</h1>
+          <p class="subtitle-jornada">
+            Jornada <strong>“Fundamentos da Educação Não Formal –<br>Microexpedição de Conceitos”</strong> concluída!
+          </p>
+
+          <div class="carimbo-banner">
+            Seu passaporte acaba de ganhar o primeiro carimbo!
+          </div>
+
+          <p class="body-text">
+            Nesta etapa inicial, você ampliou o olhar sobre <strong>onde, como e por quem se aprende</strong>, reconhecendo que a educação acontece também fora da escola, em diferentes territórios e práticas sociais.
+          </p>
+
+          <p class="body-text">
+            Antes da próxima trilha, estude o conteúdo da <strong>Semana 2 – Tipologia dos Espaços Educativos Não Formais</strong>. Isso ajudará a aprofundar sua leitura dos espaços e a perceber como diferentes contextos convidam a aprender de modos distintos.
+          </p>
+
+          <div class="info-box">
+            <p>Primeiro passo dado. Na próxima trilha, vamos olhar com mais atenção para os tipos de espaços que educam — e como cada um convida a aprender de um jeito diferente.</p>
+          </div>
+        </section>
+
+        <div class="bottom-action conteudo-casa-6" style="display: none;">
+          <button class="btn-outline-thick">Gerar PDF</button>
+          <button class="btn-outline-thick voltar-jornadas">Voltar para Jornadas</button>
+          <button class="btn-outline-thick">Reiniciar Trilha</button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- RODAPÉ -->
+  
+  <footer id="footer">
+    <!-- components/footer.js -->
+  </footer>
+
+  <!-- Fim do rodapé -->
+
+  <!-- Fim da div .esconder-tela-pequena
+  Utilizar essa div caso o REA não se adapte a todos os formatos de tela -->
+  <!-- </div> -->
+
+  <!-- //////////////////////////////////////////////////////////
+  AVISO =+960px
+  Utilizar caso o REA possua limitações quanto aos tamanhos de tela
+  Caso contrário, deletar
+  ///////////////////////////////////////////////////////////////-->
+  <!-- <div class= "container d-lg-none text-center">
+    <div class="container">
+      <a href="https://univesp.br/" target="_blank">
+        <img src="https://apps.univesp.br/common/logo-univesp-positivo.svg" alt="Logo da Univesp" height="47px" width="135px" class='img-responsive center-block' style="margin-top:4rem">
+      </a>
+    </div>
+    <img src='https://apps.univesp.br/common/aviso-tela.gif' alt="Computador Animado" height="117px" width="160px" class='img-responsive center-block' style="margin-top:3rem">
+    <div style="margin-top:.5rem">
+      <p>
+        <font style=font-family:"Barlow" color="#3b78d1" 'text-center' size="10rem"><b>OPS!</b></font>
+      </p>
+      <p>
+        <font style=font-family:"Verdana" "text-center" size="3rem">Visualize este recurso em um computador, em janela com largura mínima de 992px.</font>
+      </p>
+    </div>
+  </div> -->
+
+  <!-- CRÉDITOS -->
+  <div class="modal fade creditos" id="creditos" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <!-- components/creditos.js -->
+  </div>
+
+  <!-- Arquivos Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://apps.univesp.br/common/jquery-ui-touch-punch.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+  <!-- biblioteca html2pdf -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- Biblioteca jsPDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <!-- jsSocials -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.min.js"></script>
+  <script>
+    var share = $(".sharing");
+    var page_title = $(document).attr('title');
+    var page_url = window.location.href;
+    share.jsSocials({
+      shares: [
+        {
+          share: "facebook",
+          logo: "fab fa-facebook-f",
+        },
+        {
+          share: "twitter",
+          logo: "fab fa-twitter",
+        },
+        {
+          share: "whatsapp",
+          logo: "fab fa-whatsapp",
+        },
+      ],
+      url: page_url,
+      text: 'Confira o REA ' + page_title + '.',
+      showLabel: false,
+      showCount: false,
+      shareIn: "popup",
+    });
+  </script>
+
+  <!-- Componentes -->
+  <script type="text/javascript" src="components/creditos.js"></script>
+  <script type="text/javascript" src="components/footer.js"></script>
+
+   <!-- Custom JS -->
+<script type="text/javascript" src="javascripts/semana-manager.js"></script>
+<script type="text/javascript" src="javascripts/index.js"></script>
+<script type="text/javascript" src="javascripts/events-components.js"></script>
+ 
+</body>
+
+</html>

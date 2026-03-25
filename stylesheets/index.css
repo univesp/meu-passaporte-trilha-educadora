@@ -1,0 +1,314 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 40px;
+  margin: 80px 0 40px 0;
+}
+
+.hero-text {
+  width: 50%;
+  font-family: 'Inter', sans-serif;
+}
+
+.hero h1 {
+  font-family: 'Lato', sans-serif;
+  font-size: 3.5em;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 1.85em;
+  color: #666;
+  line-height: 1.2;
+}
+
+.hero-image {
+  width: 45%;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+}
+
+ /* Destaque Section (Welcome) */
+ .destaque-section {
+  margin-bottom: 60px;
+  position: relative;
+  padding-left: 0;
+}
+
+.destaque-section h2 {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 18px;
+  font-weight: bold;
+}
+
+.destaque-section h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  background-color: #fdd00f;
+  border-radius: 3px;
+}
+
+.destaque-section p {
+  font-size: 18px;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+ /* Missão Section */
+ .missao-section {
+  max-width: 1200px;
+  margin: 0 auto 80px auto;
+}
+
+.missao-section h2 {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 18px;
+  font-weight: bold;
+}
+
+.missao-section h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  background-color: #fdd00f;
+  border-radius: 3px;
+}
+
+.missao-section .subtext {
+  font-size: 0.85em;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Grid principal para os 4 cards */
+.missao-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 60px; /* Espaço para o topo dos números não cortar */
+}
+
+/* Estilização base de cada card */
+.missao-card {
+  position: relative;
+  background-color: #ffffff;
+  border: 4px solid;
+  border-radius: 12px;
+  padding: 50px 20px 30px 20px; /* Padding superior generoso para afastar o texto do número */
+}
+
+/* Cores das bordas de acordo com a imagem */
+.missao-1 { border-color: #271f84; } /* Azul escuro */
+.missao-2 { border-color: #007455; } /* Verde escuro */
+.missao-3 { border-color: #e52d3a; } /* Vermelho */
+.missao-4 { border-color: #fccc24; } /* Amarelo */
+
+/* Estilização dos grandes números */
+.missao-card .number {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  transform: translateY(-50%); /* Puxa o número exatamente para a metade da linha da borda */
+  background-color: #ffffff; /* Fundo branco para cobrir a linha da borda */
+  padding: 0 15px; /* Espaço nas laterais para fazer o "corte" */
+  font-size: 85px;
+  font-weight: 900;
+  line-height: 0.8;
+  color: #000000;
+  letter-spacing: -3px;
+}
+
+/* Estilo do texto interno do card */
+.missao-card p {
+  font-size: 16px;
+  line-height: 1.4;
+  color: #111111;
+}
+
+/* Critérios Section */
+.criterios-section {
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.criterios-section h2 {
+  position: relative;
+  padding-left: 24px;
+  color: #222;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.criterios-section h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  background-color: #fdd00f;
+  border-radius: 3px;
+}
+
+/* Container da seção */
+.dimensoes-section {
+  max-width: 1200px;
+  margin: 40px auto 0 auto;
+  width: 100%;
+}
+
+/* Grid para os 6 cards (3 colunas no desktop) */
+.dimensoes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+/* Estilo individual de cada card */
+.dimensao-card {
+  background-color: #ffffff;
+  border: 2px solid #666666; /* Cinza escuro como na imagem */
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Estilização das imagens PNG */
+.dimensao-card img {
+  width: 50px;
+  height: 50px;
+  display: block; /* Remove espaços em branco extras abaixo da imagem */
+  object-fit: contain; /* Garante que a imagem não distorça */
+}
+
+/* Títulos dos cards */
+.dimensao-card h3 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #111111;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* Textos explicativos dos cards */
+.dimensao-card p {
+  font-size: 18px;
+  line-height: 1.4;
+  color: #333333;
+  margin: 0;
+}
+
+/* Closing Section */
+.closing {
+  text-align: center;
+  padding: 40px;
+  background: transparent;
+  margin: 30px 0 40px 0;
+}
+
+.closing p {
+  font-size: 1.1em;
+  color: #444;
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.start-btn {
+  display: inline-block;
+  padding: 15px 40px;
+  background-color: transparent;
+  color: #000;
+  border: 3px solid #000;
+  border-radius: 50px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.start-btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+
+
+/* Responsividade para telas menores (Tablets e Celulares) */
+@media (max-width: 992px) {
+  .missao-grid {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 60px; /* Mais espaço vertical quando os cards quebram a linha */
+  }
+
+  .dimensoes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-text > p {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-image {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .hero-text-desktop {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .missao-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dimensoes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-text-mobile {
+    display: none !important;
+  } 
+}

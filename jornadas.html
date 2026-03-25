@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:image" content="assets/fb-share.png">
+  <meta name="author" content="Univesp">
+
+  <meta name="description" property="og:description"
+  content="">
+
+  <title>Univesp | Meu Passaporte da Trilha Educadora</title>
+
+  <link rel="shortcut icon" href="https://apps.univesp.br/common/favicon.ico" type="image/x-icon"/>
+
+  <!-- Arquivos Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+
+  <!-- Ícones por Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <!-- Ícones por Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Tipografia institucional por Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Compartilhamento por jsSocials -->
+  <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.css" />
+  <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials-theme-minima.css" />
+
+  <!-- Animate CSS. Descomente se for utilizar. Caso contrário, remova. -->
+  <!-- <link rel="stylesheet" href="https://apps.univesp.br/common/animate.css"> -->
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="https://apps.univesp.br/common/rea-geral-2.1.css">
+  <!-- <link rel="stylesheet" href="../common/rea-geral-2.1.css">   -->
+  <link rel="stylesheet" href="stylesheets/nav_footer.css">
+  <link rel="stylesheet" href="stylesheets/global.css">
+  <link rel="stylesheet" href="stylesheets/jornadas.css">
+
+</head>
+
+<body class="d-flex flex-column">
+
+  <!-- Utilizar essa DIV caso o REA não se adapte a todos os tamanhos de tela -->
+  <!-- <div class="esconder-tela-pequena"> -->
+
+  <!-- Menu -->
+  <!--///////////////////////////////////////////////////////////////
+  Classe para nav
+  - padrão => header estático
+  - class="header-dinamico" => header possui posição fixa e é mostrado apenas quando a página está no topo (necessário ajustar padding ou margin superior e inferior do main).
+  //////////////////////////////////////////////////////////////////-->
+  <!-- <nav class="header-dinamico"> -->
+  <nav id="navHeaderPaginaInicial">
+    <div class="container">
+      <!-- Logo -->
+      <div class="logo">
+        <a class="pularNavegacao" href="#conteudoPrincipal">Pular para Conteúdo Principal</a>
+        <a href="https://univesp.br/" target="_blank">
+          <img src="https://apps.univesp.br/common/colorida-positiva.svg" alt="Link para site institucional. Logotipo da universidade formado pela palavra Univesp, sendo a letra V estilizada.">
+          <!-- outras opções de img src: colorida-negativa.svg, traco-positiva.svg, traco-negativa.svg -->
+        </a>
+      </div>
+      <!-- Compartilhamento -->
+      <ul class="nav justify-content-end">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <i class="material-icons" aria-label="Opções de Compartilhamento">share</i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <div class="sharing"></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Conteúdo -->
+  <main id="conteudoPrincipal">
+    <!-- Seu conteúdo -->
+
+    <div class="container">
+
+      <section class="jornada-section">
+
+        <section class="progresso-section">
+          <h2>Seu Progresso</h2>
+          <p>Continue explorando territórios educativos</p>
+          
+          <div class="barra-container">
+            <div class="barra-fundo">
+              
+              <div class="step">
+                <!--
+                <div class="circle done">
+                  <svg viewBox="0 0 24 24" class="check-icon">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                -->
+                <div class="circle"></div>
+                <span class="label">Semana 1</span>
+              </div>
+      
+              <div class="step">
+                <div class="circle"></div>
+                <span class="label">Semana 2</span>
+              </div>
+      
+              <div class="step">
+                <div class="circle"></div>
+                <span class="label">Semana 3</span>
+              </div>
+      
+              <div class="step">
+                <div class="circle"></div>
+                <span class="label">Semana 4</span>
+              </div>
+      
+              <div class="step">
+                <div class="circle"></div>
+                <span class="label">Semana 5</span>
+              </div>
+      
+              <div class="step">
+                <div class="circle"></div>
+                <span class="label">Semana 6</span>
+              </div>
+      
+              <div class="step">
+                <div class="circle"></div>
+                <span class="label">Semana 7</span>
+              </div>
+      
+            </div>
+          </div>
+        </section>
+      
+          <div class="cards-grid">
+      
+            <div class="card c-azul" data-card="1">
+              <div class="card-header">
+                <img src="assets/semana1.png" alt="Ícone" class="card-icon">
+                <div class="card-title-group">
+                  <div class="card-week">Semana 1</div>
+                  <div class="card-subtitle">Microexpedição de Conceitos</div>
+                </div>
+                <!--
+                <div class="status-circle done"></div>
+                -->
+                <div class="status-circle"></div>
+              </div>
+              <div class="card-body">
+                <h4>Fundamentos da Educação Não Formal</h4>
+                <a href="semana-1.html" class="card-link">Iniciar trilha >>></a>
+              </div>
+            </div>
+      
+            <div class="card c-verde" data-card="2">
+              <div class="card-header">
+                <img src="assets/semana2.png" alt="Ícone" class="card-icon">
+                <div class="card-title-group">
+                  <div class="card-week">Semana 2</div>
+                  <div class="card-subtitle">Tríade de Tipologias</div>
+                </div>
+                <div class="status-circle"></div>
+              </div>
+              <div class="card-body">
+                <h4>Tipologias dos Espaços Educativos</h4>
+                <a href="semana-2.html" class="card-link">Iniciar trilha >>></a>
+              </div>
+            </div>
+      
+            <div class="card c-vermelho" data-card="3">
+              <div class="card-header">
+                <img src="assets/semana3.png" alt="Ícone" class="card-icon">
+                <div class="card-title-group">
+                  <div class="card-week">Semana 3</div>
+                  <div class="card-subtitle">Olhar Patrimonial</div>
+                </div>
+                <div class="status-circle"></div>
+              </div>
+              <div class="card-body">
+                <h4>Museus e Educação Patrimonial</h4>
+                <a href="semana-3.html" class="card-link">Iniciar trilha >>></a>
+              </div>
+            </div>
+      
+            <div class="card c-amarelo" data-card="4">
+              <div class="card-header">
+                <img src="assets/semana4.png" alt="Ícone" class="card-icon">
+                <div class="card-title-group">
+                  <div class="card-week">Semana 4</div>
+                  <div class="card-subtitle">Mini Hands-on Investigativo</div>
+                </div>
+                <div class="status-circle"></div>
+              </div>
+              <div class="card-body">
+                <h4>Centros de Ciência</h4>
+                <a href="semana-4.html" class="card-link">Iniciar trilha >>></a>
+              </div>
+            </div>
+      
+            <div class="card c-roxo" data-card="5">
+              <div class="card-header">
+                <img src="assets/semana5.png" alt="Ícone" class="card-icon">
+                <div class="card-title-group">
+                  <div class="card-week">Semana 5</div>
+                  <div class="card-subtitle">Trilhas de Bairro</div>
+                </div>
+                <div class="status-circle"></div>
+              </div>
+              <div class="card-body">
+                <h4>Cidade Educadora</h4>
+                <a href="semana-5.html" class="card-link">Iniciar trilha >>></a>
+              </div>
+            </div>
+      
+            <div class="card c-laranja" data-card="6">
+              <div class="card-header">
+                <img src="assets/semana6.png" alt="Ícone" class="card-icon">
+                <div class="card-title-group">
+                  <div class="card-week">Semana 6</div>
+                  <div class="card-subtitle">Mediação Inclusiva</div>
+                </div>
+                <div class="status-circle"></div>
+              </div>
+              <div class="card-body">
+                <h4>Mediação Pedagógica</h4>
+                <a href="semana-6.html" class="card-link">Iniciar trilha >>></a>
+              </div>
+            </div>
+      
+            <div class="card c-rosa" data-card="7">
+              <div class="card-header">
+                <img src="assets/semana7.png" alt="Ícone" class="card-icon">
+                <div class="card-title-group">
+                  <div class="card-week">Semana 7</div>
+                  <div class="card-subtitle">Radar de Parceiros</div>
+                </div>
+                <div class="status-circle"></div>
+              </div>
+              <div class="card-body">
+                <h4>Articulação Escola-Território</h4>
+                <a href="semana-7.html" class="card-link">Iniciar trilha >>></a>
+              </div>
+            </div>
+      
+          </div>
+      
+          <div class="action-buttons">
+            <a href="index.html" class="btn-action-jornadas">Início</a>
+            <a href="#" class="btn-action-jornadas">Concluir Passaporte</a>
+          </div>
+      
+      </section>
+      
+    </div>
+
+  </main>
+
+  <!-- RODAPÉ -->
+  
+  <footer id="footer">
+    <!-- components/footer.js -->
+  </footer>
+
+  <!-- Fim do rodapé -->
+
+  <!-- Fim da div .esconder-tela-pequena
+  Utilizar essa div caso o REA não se adapte a todos os formatos de tela -->
+  <!-- </div> -->
+
+  <!-- //////////////////////////////////////////////////////////
+  AVISO =+960px
+  Utilizar caso o REA possua limitações quanto aos tamanhos de tela
+  Caso contrário, deletar
+  ///////////////////////////////////////////////////////////////-->
+  <!-- <div class= "container d-lg-none text-center">
+    <div class="container">
+      <a href="https://univesp.br/" target="_blank">
+        <img src="https://apps.univesp.br/common/logo-univesp-positivo.svg" alt="Logo da Univesp" height="47px" width="135px" class='img-responsive center-block' style="margin-top:4rem">
+      </a>
+    </div>
+    <img src='https://apps.univesp.br/common/aviso-tela.gif' alt="Computador Animado" height="117px" width="160px" class='img-responsive center-block' style="margin-top:3rem">
+    <div style="margin-top:.5rem">
+      <p>
+        <font style=font-family:"Barlow" color="#3b78d1" 'text-center' size="10rem"><b>OPS!</b></font>
+      </p>
+      <p>
+        <font style=font-family:"Verdana" "text-center" size="3rem">Visualize este recurso em um computador, em janela com largura mínima de 992px.</font>
+      </p>
+    </div>
+  </div> -->
+
+  <!-- CRÉDITOS -->
+  <div class="modal fade creditos" id="creditos" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <!-- components/creditos.js -->
+  </div>
+
+  <!-- Arquivos Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://apps.univesp.br/common/jquery-ui-touch-punch.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+  <!-- jsSocials -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.min.js"></script>
+  <script>
+    var share = $(".sharing");
+    var page_title = $(document).attr('title');
+    var page_url = window.location.href;
+    share.jsSocials({
+      shares: [
+        {
+          share: "facebook",
+          logo: "fab fa-facebook-f",
+        },
+        {
+          share: "twitter",
+          logo: "fab fa-twitter",
+        },
+        {
+          share: "whatsapp",
+          logo: "fab fa-whatsapp",
+        },
+      ],
+      url: page_url,
+      text: 'Confira o REA ' + page_title + '.',
+      showLabel: false,
+      showCount: false,
+      shareIn: "popup",
+    });
+  </script>
+
+  <!-- Componentes -->
+  <script type="text/javascript" src="components/creditos.js"></script>
+  <script type="text/javascript" src="components/footer.js"></script>
+
+   <!-- Custom JS -->
+   <script type="text/javascript" src="javascripts/jornadas.js"></script>
+   <script type="text/javascript" src="javascripts/index.js"></script>
+   <script type="text/javascript" src="javascripts/events-components.js"></script>
+ 
+</body>
+
+</html>
