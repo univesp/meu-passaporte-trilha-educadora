@@ -6,7 +6,7 @@ let footerContent = `
         <div>Recurso Educacional Aberto (REA) desenvolvido pela <a href="https://univesp.br/" target="blank">Univesp</a>, disponível sob licença <a href="http://apps.univesp.br/common/license_MIT_2020.txt" target="_blank">MIT</a>.
         Você pode utilizá-lo, compartilhá-lo e modificá-lo.</div>
         <div><button class="btn btn-link" data-toggle="modal" data-target="#creditos">Créditos</button></div>
-        <div><a href="https://github.com/univesp/meu-passaporte-cientifico" target="_blank" aria-label="GitHub" style="white-space:nowrap;">GitHub <i class="fab fa-github"></i></a></div>
+        <div><a href="https://github.com/univesp/meu-passaporte-trilha-educadora" target="_blank" aria-label="GitHub" style="white-space:nowrap;">GitHub <i class="fab fa-github"></i></a></div>
         <div>Compartilhe: <div class="sharing"></div></div>
 
       <!-- Descomente em caso de adaptação do REA -->

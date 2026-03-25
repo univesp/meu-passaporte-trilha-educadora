@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:image" content="assets/fb-share.png">
+  <meta name="author" content="Univesp">
+
+  <meta name="description" property="og:description"
+  content="">
+
+  <title>Univesp | Meu Passaporte da Trilha Educadora</title>
+
+  <link rel="shortcut icon" href="https://apps.univesp.br/common/favicon.ico" type="image/x-icon"/>
+
+  <!-- Arquivos Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+
+  <!-- Ícones por Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <!-- Ícones por Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Tipografia institucional por Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Inter:wght@200;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Compartilhamento por jsSocials -->
+  <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.css" />
+  <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials-theme-minima.css" />
+
+  <!-- Animate CSS. Descomente se for utilizar. Caso contrário, remova. -->
+  <!-- <link rel="stylesheet" href="https://apps.univesp.br/common/animate.css"> -->
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="https://apps.univesp.br/common/rea-geral-2.1.css">
+  <!-- <link rel="stylesheet" href="../common/rea-geral-2.1.css">   -->
+  <link rel="stylesheet" href="stylesheets/nav_footer.css">
+  <link rel="stylesheet" href="stylesheets/global.css">
+  <link rel="stylesheet" href="stylesheets/semanas.css">
+  <link rel="stylesheet" href="stylesheets/semana3.css">
+
+</head>
+
+<body class="d-flex flex-column">
+
+  <div id="loading-screen" style="
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #212121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+  ">
+    <div style="text-align: center; color: white;">
+      <img class="icone-semana-loading" src="assets/semana3-loading.svg" alt="Lumi" style="width: 110px; animation: pulse 1s infinite;">
+      <p style="margin-top: 20px; font-family: 'Nunito', sans-serif; font-size: 20px;">Carregando sua jornada...</p>
+    </div>
+  </div>
+
+  <style>
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+
+  <!-- Utilizar essa DIV caso o REA não se adapte a todos os tamanhos de tela -->
+  <!-- <div class="esconder-tela-pequena"> -->
+
+  <!-- Menu -->
+  <!--///////////////////////////////////////////////////////////////
+  Classe para nav
+  - padrão => header estático
+  - class="header-dinamico" => header possui posição fixa e é mostrado apenas quando a página está no topo (necessário ajustar padding ou margin superior e inferior do main).
+  //////////////////////////////////////////////////////////////////-->
+  <!-- <nav class="header-dinamico"> -->
+    <!--
+  <nav id="navHeaderPaginaInicial">
+    <div class="container">
+      
+      <div class="logo">
+        <a class="pularNavegacao" href="#conteudoPrincipal">Pular para Conteúdo Principal</a>
+        <a href="https://univesp.br/" target="_blank">
+          <img src="https://apps.univesp.br/common/colorida-positiva.svg" alt="Link para site institucional. Logotipo da universidade formado pela palavra Univesp, sendo a letra V estilizada.">
+          
+        </a>
+      </div>
+      
+      <ul class="nav justify-content-end">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <i class="material-icons" aria-label="Opções de Compartilhamento">share</i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <div class="sharing"></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  -->
+
+  <!-- Conteúdo -->
+  <main id="conteudoPrincipal">
+    <!-- Seu conteúdo -->
+
+    <div class="titulo-semana-container">
+
+      <div class="semana-titulo-container">
+        <div class="semana-id">
+          <!-- Trocar para a semana correspondente -->
+          <span>Semana 3</span>
+        </div>
+        <div class="semana-titulo">
+          <span><b>Museus e Educação Patrimonial /</b> Olhar patrimonial</span>
+        </div>
+      </div>
+
+      <div class="bullets">
+        <div class="bullet-item"></div>
+        <div class="bullet-item"></div>
+        <div class="bullet-item"></div>
+        <div class="bullet-item"></div>
+        <div class="bullet-item"></div>
+        <div class="bullet-item"></div>
+      </div>
+
+    </div>
+
+    <div class="container">
+
+      <div class="semana-content-box" id="semana3">
+
+        <!-- Headers - Comum a Todas as Semanas -->
+        <div class="header-titles" data-casa="1">
+          <h3>Semana 3 - Casa 1</h3>
+          <h1>Escolha seu destino</h1>
+        </div>
+
+        <div class="header-titles" data-casa="2" style="display: none;">
+          <h3>Semana 3 - Casa 2</h3>
+          <h1>Passaporte</h1>
+        </div>
+
+        <div class="header-titles" data-casa="3" style="display: none;">
+          <h3>Semana 3 - Casa 3</h3>
+          <h1>Atividade do Passaporte</h1>
+        </div>
+
+        <div class="header-titles" data-casa="4" style="display: none;">
+          <h3>Semana 3 - Casa 4</h3>
+          <h1>Aprendizado</h1>
+        </div>
+
+        <div class="header-titles" data-casa="5" style="display: none;">
+          <h3>Semana 3 - Casa 5</h3>
+          <h1>Aplicação Prática</h1>
+        </div>
+
+        <div class="header-titles" data-casa="6" style="display: none;">
+          
+        </div>
+
+        <nav class="nav-tabs">
+          <div  class="nav-tab active-pill"><img src="assets/ico-destino.png" alt="Ícone"> Escolha seu destino</div>
+          <div class="nav-tab"><img src="assets/ico-passaporte.png" alt="Ícone"> Passaporte</div>
+          <div class="nav-tab"><img src="assets/ico-atividade.png" alt="Ícone"> Atividade</div>
+          <div class="nav-tab"><img src="assets/ico-aprendizado.png" alt="Ícone"> Aprendizado</div>
+          <div class="nav-tab"><img src="assets/ico-aplicacao.png" alt="Ícone"> Aplicação Prática</div>
+        </nav>
+
+        <!-- CONTEUDO DAS CASAS -->
+
+        <!-- CASA 1 -->
+        <section class="content-card conteudo-casa-1">
+          <p>Selecione um espaço patrimonial e defina o modo da visita (presencial ou virtual).</p>
+    
+          <h4>Sugestões de espaços presenciais:</h4>
+          <ul class="custom-list">
+            <li>Museu histórico, arqueológico ou de arte</li>
+            <li>Centro de memória local</li>
+            <li>Arquivo público ou memorial</li>
+            <li>Patrimônio tombado do município (igreja, prédio histórico, praça, monumento)</li>
+          </ul>
+    
+          <h4>Alternativas virtuais</h4>
+          <ul class="custom-list">
+            <li>Acervos digitais de museus e arquivos</li>
+            <li>Exposições virtuais comentadas</li>
+            <li>Mapas históricos e linhas do tempo digitais</li>
+            <li>Visitas mediadas online a museus</li>
+          </ul>
+    
+          <p class="bold-paragraph">Caso a visita seja virtual, explore o site indicado como se fosse o próprio território educativo, observando suas linguagens, formas de mediação e possibilidades de aprendizagem.</p>
+    
+          <div class="link-pills">
+            <a target="_blank" href="https://www.ibermuseos.org/pt/recursos/documentos/?tipo_documento=narrativa-historica" class="link-pill"><img src="assets/ico-link.png" alt="Link"> IBER - Museus</a>
+            <a target="_blank" href="https://www.museudalinguaportuguesa.org.br/museu-lanca-exposicao-virtual-de-nhee-pora-memoria-e-transformacao-e-libera-materiais-educativos/" class="link-pill"><img src="assets/ico-link.png" alt="Link"> Museu da Língua Portuguesa</a>
+          </div>
+    
+          <div class="info-box">
+            <h5>Orientação</h5>
+            <p>Escolha um espaço que permita refletir sobre <b>memória, patrimônio e narrativas históricas</b>, observando não apenas o que é mostrado, mas também <b>como e por que é mostrado</b>.</p>
+          </div>
+        </section>
+
+        <div class="bottom-action conteudo-casa-1">
+          <button class="btn-outline" style="display: none;">Voltar</button>
+          <button class="btn-outline">Continuar para o Passaporte</button>
+        </div>
+
+        <!-- CASA 2 -->
+        <section class="content-card conteudo-casa-2">
+          <p class="page-intro-text">Preencha no seu <strong>Passaporte da Trilha Educadora</strong></p>
+          <form id="passaporteForm" class="form-container">
+            
+            <div class="form-group">
+              <label for="estudanteNome" class="form-label">Nome do estudante</label>
+              <input type="text" id="estudanteNome" class="form-input" placeholder="Seu nome completo">
+            </div>
+
+            <div class="form-group">
+              <label for="espacoVisitado" class="form-label">Espaço visitado</label>
+              <input type="text" id="espacoVisitado" class="form-input" placeholder="Nome do local visitado">
+            </div>
+
+            <div class="form-group">
+              <label for="modalidadeSelecao" class="form-label">Modalidade</label>
+              <select id="modalidadeSelecao" class="form-select">
+                <option value="" disabled selected>Selecione...</option>
+                <option value="presencial">Presencial</option>
+                <option value="virtual">Virtual</option>
+              </select>
+            </div>
+
+            <div class="form-group with-icon">
+              <label for="checkinData" class="form-label">Check-in (Data da visita)</label>
+              <div style="position: relative;">
+                <input type="date" id="checkinData" class="form-input">
+                </div>
+            </div>
+
+            <div class="form-group with-icon">
+              <label class="form-label">
+                <img src="assets/ico-camera.png" alt="Câmera"> Foto ou imagem do espaço
+              </label>
+              
+              <div id="imageUploadContainer">
+                <img id="imagePreview" src="" alt="Pré-visualização da foto do espaço">
+                
+                <div class="upload-placeholder" id="uploadPlaceholder">
+                  <img src="assets/ico-camera.png" alt="Adicionar imagem">
+                  <span>Clique para adicionar imagem</span>
+                </div>
+              </div>
+
+              <!-- Botão para remover imagem -->
+              <button type="button" id="removeImageBtn" class="btn-remove-image" style="display: none;">
+                <i class="fas fa-trash-alt"></i> Remover imagem
+              </button>
+              
+              <input type="file" id="imageUpload" accept="image/*">
+            </div>
+
+            <div class="form-group">
+              <label for="localDescricao" class="form-label">Descrição breve do local</label>
+              <textarea id="localDescricao" class="form-textarea" placeholder="O que é, para quem existe, o que acontece ali..."></textarea>
+            </div>
+
+          </form>
+        </section>
+
+        <div class="bottom-action conteudo-casa-2" style="display: none;">
+          <button class="btn-outline-thick">Voltar</button>
+          <button type="button" id="continuarBtn" class="btn-outline-thick">Continuar</button>
+        </div>
+
+        <!-- CASA 3 -->
+        <section class="content-card conteudo-casa-3" style="display: none;">
+          <div class="info-box">
+            <p>Museus e patrimônios contam histórias — mas não todas ao mesmo tempo. Observe com atenção o que ganha destaque e o que permanece em silêncio.</p>
+          </div>
+
+          <h4>Tarefa — Registro interpretativo</h4>
+
+          <p style="margin-bottom: 15px;">Escolha um objeto, espaço ou narrativa patrimonial (material ou imaterial) e produza um registro interpretativo, refletindo sobre:</p>
+
+          <ul style="margin-left: 4%;">
+            <li>O que é apresentado como patrimônio?</li>
+            <li>Que memórias, grupos sociais ou períodos históricos são valorizados?</li>
+            <li>Que histórias ficam ausentes, apagadas ou pouco visíveis?</li>
+          </ul>
+
+          <p>Ao final, elabore <b>duas perguntas disparadoras</b> que poderiam ser feitas a crianças da <b>Educação Infantil</b> ou do <b>Ensino Fundamental I</b> durante uma visita mediada.</p>
+
+          <form id="atividadeForm" class="form-container">
+        
+            <div class="form-group">
+              <label for="experiencia1Descricao" class="form-label">
+                <img src="assets/ico-atv.png" alt="Ícone" class="inline-icon"> Pergunta 1
+              </label>
+              <textarea id="experiencia1Descricao" class="form-textarea" placeholder="Descreva a experiência e analise: intencionalidade, mediação, público..."></textarea>
+            </div>
+    
+            <div class="form-group">
+              <label for="experiencia2Descricao" class="form-label">
+                <img src="assets/ico-atv.png" alt="Ícone" class="inline-icon"> Pergunta 2
+              </label>
+              <textarea id="experiencia2Descricao" class="form-textarea" placeholder="Descreva a experiência e analise: intencionalidade, mediação, público..."></textarea>
+            </div>
+    
+          </form>
+
+          <div style="margin-top: 30px;" class="info-box">
+            <p>"Patrimônio não é apenas o que é antigo. É aquilo que alguém decidiu guardar, mostrar e contar. Quando você percebe isso, o seu olhar muda.”</p>
+          </div>
+        </section>
+
+        <div class="bottom-action conteudo-casa-3" style="display: none;">
+          <button class="btn-outline-thick">Voltar</button>
+          <button class="btn-outline-thick">Continuar</button>
+        </div>
+
+        <!-- CASA 4 -->
+        <section class="content-card conteudo-casa-4" style="display: none;">
+          <div class="content-title">O que aprendi sobre educação patrimonial?</div>
+          <p>Escreva, com suas palavras (3 a 5 linhas):</p>
+
+          <ul class="custom-list">
+            <li>o que você compreendeu sobre o papel dos museus e do patrimônio na educação;</li>
+            <li>como o <b>olhar patrimonial</b> amplia a leitura do território e da história.</li>
+          </ul>
+
+          <p>Você pode complementar com:</p>
+          <ul class="custom-list">
+            <li>esquema interpretativo,</li>
+            <li>palavras-chave,</li>
+            <li>mapa conceitual simples.</li>
+          </ul>
+
+          <textarea id="aprendizadoReflexao" class="form-textarea" placeholder="Reflita sobre seus aprendizados..."></textarea>
+        </section>
+
+        <div class="bottom-action conteudo-casa-4" style="display: none;">
+          <button class="btn-outline-thick">Voltar</button>
+          <button class="btn-outline-thick">Continuar</button>
+        </div>
+
+        <!-- CASA 5 -->
+        <section class="content-card conteudo-casa-5" style="display: none;">
+          <div class="content-title">Como mediar o patrimônio com crianças?</div>
+          <p style="margin-bottom: 10px;">Reflita:</p>
+
+          <ul style="margin-left: 4%;">
+            <li>Que aspectos desse patrimônio podem dialogar com crianças pequenas?</li>
+            <li>Que cuidados de linguagem e mediação são necessários?</li>
+            <li>Que atividades favorecem observação, escuta e conversa (desenho, roda de conversa, narrativa, comparação)?</li>
+          </ul>
+
+          <p>Registre ideias iniciais para uma visita mediada ou atividade escolar.</p>
+
+          <textarea style="margin-top: 0;" id="aplicacaoIdeias" class="form-textarea" placeholder="Registre suas ideias, mesmo em forma de rascunho..."></textarea>
+
+          <div style="margin-top: 20px;" class="info-box">
+            <p>Quando a criança observa um objeto ou lugar com mediação, ela aprende a escutar o passado e a pensar o presente.</p>
+          </div>
+        </section>
+
+        <div class="bottom-action conteudo-casa-5" style="display: none;">
+          <button class="btn-outline-thick">Voltar</button>
+          <button class="btn-outline-thick">Concluir Trilha</button>
+        </div>
+
+        <!-- CASA 6 (Conclusão) -->
+        <section class="content-card conteudo-casa-6" style="display: none;">
+          <img src="assets/semana3-loading.svg" alt="Ícone de mapa concluído" class="success-icon">
+
+          <h1 class="title-parabens">Parabéns!</h1>
+          <p class="subtitle-jornada">
+            Jornada <strong>“Museus e Educação Patrimonial – Olhar Patrimonial”</strong> concluída!
+          </p>
+
+          <div class="carimbo-banner">
+            Seu passaporte recebeu mais um carimbo!
+          </div>
+
+          <p class="body-text">
+            Agora você já percebe que <b>museus e patrimônios não são neutros:</b> eles selecionam memórias, constroem narrativas e produzem sentidos sobre o passado e o presente. Desenvolver um olhar patrimonial é aprender a ler essas escolhas de forma crítica e pedagógica.
+          </p>
+
+          <p class="body-text">
+            <p>Antes da próxima trilha, estude o conteúdo da <b>Semana 4 – Centros de Ciência e Divulgação Científica.</b> Isso ajudará a refletir sobre como <b>interatividade, experimentação e investigação</b> podem se transformar em aprendizagem.</p>
+          </p>
+
+          <div class="info-box">
+            <p>Seguimos caminhando. Na próxima trilha, vamos entrar nos centros de ciência e perguntar: como transformar o ‘mexer e ver’ em investigação?</p>
+          </div>
+        </section>
+
+        <div class="bottom-action conteudo-casa-6" style="display: none;">
+          <button class="btn-outline-thick">Gerar PDF</button>
+          <button class="btn-outline-thick voltar-jornadas">Voltar para Jornadas</button>
+          <button class="btn-outline-thick">Reiniciar Trilha</button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- RODAPÉ -->
+  
+  <footer id="footer">
+    <!-- components/footer.js -->
+  </footer>
+
+  <!-- Fim do rodapé -->
+
+  <!-- Fim da div .esconder-tela-pequena
+  Utilizar essa div caso o REA não se adapte a todos os formatos de tela -->
+  <!-- </div> -->
+
+  <!-- //////////////////////////////////////////////////////////
+  AVISO =+960px
+  Utilizar caso o REA possua limitações quanto aos tamanhos de tela
+  Caso contrário, deletar
+  ///////////////////////////////////////////////////////////////-->
+  <!-- <div class= "container d-lg-none text-center">
+    <div class="container">
+      <a href="https://univesp.br/" target="_blank">
+        <img src="https://apps.univesp.br/common/logo-univesp-positivo.svg" alt="Logo da Univesp" height="47px" width="135px" class='img-responsive center-block' style="margin-top:4rem">
+      </a>
+    </div>
+    <img src='https://apps.univesp.br/common/aviso-tela.gif' alt="Computador Animado" height="117px" width="160px" class='img-responsive center-block' style="margin-top:3rem">
+    <div style="margin-top:.5rem">
+      <p>
+        <font style=font-family:"Barlow" color="#3b78d1" 'text-center' size="10rem"><b>OPS!</b></font>
+      </p>
+      <p>
+        <font style=font-family:"Verdana" "text-center" size="3rem">Visualize este recurso em um computador, em janela com largura mínima de 992px.</font>
+      </p>
+    </div>
+  </div> -->
+
+  <!-- CRÉDITOS -->
+  <div class="modal fade creditos" id="creditos" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <!-- components/creditos.js -->
+  </div>
+
+  <!-- Arquivos Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://apps.univesp.br/common/jquery-ui-touch-punch.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+  <!-- biblioteca html2pdf -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- Biblioteca jsPDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <!-- jsSocials -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.min.js"></script>
+  <script>
+    var share = $(".sharing");
+    var page_title = $(document).attr('title');
+    var page_url = window.location.href;
+    share.jsSocials({
+      shares: [
+        {
+          share: "facebook",
+          logo: "fab fa-facebook-f",
+        },
+        {
+          share: "twitter",
+          logo: "fab fa-twitter",
+        },
+        {
+          share: "whatsapp",
+          logo: "fab fa-whatsapp",
+        },
+      ],
+      url: page_url,
+      text: 'Confira o REA ' + page_title + '.',
+      showLabel: false,
+      showCount: false,
+      shareIn: "popup",
+    });
+  </script>
+
+  <!-- Componentes -->
+  <script type="text/javascript" src="components/creditos.js"></script>
+  <script type="text/javascript" src="components/footer.js"></script>
+
+   <!-- Custom JS -->
+<script type="text/javascript" src="javascripts/semana-manager.js"></script>
+<script type="text/javascript" src="javascripts/index.js"></script>
+<script type="text/javascript" src="javascripts/events-components.js"></script>
+ 
+</body>
+
+</html>
