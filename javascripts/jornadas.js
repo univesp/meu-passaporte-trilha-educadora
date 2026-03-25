@@ -4,13 +4,13 @@
 
 // Cores de cada semana (para o background do card quando concluído)
 const coresDasSemanas = {
-  1: '#191698',   // Semana 1 - Azul
-  2: '#2E7D32',   // Semana 2 - Verde
-  3: '#D32F2F',   // Semana 3 - Vermelho
-  4: '#ED6C02',   // Semana 4 - Amarelo/Laranja
-  5: '#9C27B0',   // Semana 5 - Roxo
-  6: '#0288D1',   // Semana 6 - Azul claro
-  7: '#E43474'    // Semana 7 - Rosa
+  1: '#191698',   // Semana 1
+  2: '#007B5F',   // Semana 2
+  3: '#EC2C39',   // Semana 3
+  4: '#FFD425',   // Semana 4
+  5: '#844DCF',   // Semana 5
+  6: '#ED6D02',   // Semana 6
+  7: '#E43474'    // Semana 7
 };
 
 // Função para verificar se uma semana está concluída

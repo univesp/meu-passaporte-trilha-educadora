@@ -1,0 +1,44 @@
+:root {
+  /* Cores principais */
+  --cor-primaria: #FFD425;          
+  --cor-branca: #FFF;
+}
+
+.bullet-item,
+.semana-id,
+.custom-list li::before,
+.info-box,
+.nav-tab.active-pill,
+.conteudo-casa-6 .carimbo-banner {
+  background-color: var(--cor-primaria);
+}
+
+.semana-id > span,
+.nav-tab.active-pill,
+.info-box,
+.conteudo-casa-6 .carimbo-banner {
+  color: #000 !important;
+}
+
+.nav-tab.active-pill img {
+  filter: none !important;
+}
+
+nav .logo img, 
+nav .nav-link, 
+nav .nav-link:focus, 
+nav .nav-link:hover, 
+nav .nav-link[aria-expanded="true"],
+footer, 
+footer .sharing i {
+  background-color: var(--cor-primaria) !important;
+  color: #000;
+}
+
+footer .cred-rea>div:not(:first-child) {
+  border-left-color: #000;
+}
+
+footer .aval-rea .btn-secondary {
+  border-color: #000;
+}
