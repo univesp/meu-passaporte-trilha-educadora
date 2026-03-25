@@ -178,7 +178,7 @@ if (aplicacaoIdeias) {
 }
 
 // ============================================
-// BOTÃO GERAR PDF NA CASA 6 - COM COR DINÂMICA
+// BOTÃO GERAR PDF NA CASA 6
 // ============================================
 setTimeout(() => {
   const gerarPdfBtn = document.querySelector('.bottom-action.conteudo-casa-6 button:first-child');
@@ -214,10 +214,9 @@ setTimeout(() => {
       }
       
       const corPrincipal = coresDasSemanas[semanaAtual] || '#191698';
-      const corFundoTitulo = '#e6e3e3'; // Cor de fundo dos títulos
-      // ============================================
+      const corFundoTitulo = '#e6e3e3';
       
-      // Busca os dados do localStorage unificado
+      // Busca os dados do localStorage unificado (apenas para o PDF, não limpa)
       const dadosCompletos = JSON.parse(localStorage.getItem(`semana${semanaAtual}Dados`)) || { casas: {} };
       const dadosPassaporte = dadosCompletos.casas[2] || {};
       const dadosAtividade = dadosCompletos.casas[3] || {};
@@ -316,54 +315,9 @@ setTimeout(() => {
         document.body.removeChild(tempDiv);
 
         // ============================================
-        // LIMPAR DADOS DO USUÁRIO, MAS MANTER A FLAG DE CONCLUSÃO
+        // NÃO LIMPAR OS DADOS - APENAS GERAR O PDF
         // ============================================
-        // Busca os dados atuais
-        const dadosAtuais = JSON.parse(localStorage.getItem(`semana${semanaAtual}Dados`)) || { semanaConcluida: false, casas: {} };
-
-        // Mantém a flag de conclusão
-        const semanaConcluida = dadosAtuais.semanaConcluida;
-
-        // Recria o objeto mantendo apenas a flag de conclusão e limpando os dados das casas
-        const novosDados = {
-          semanaConcluida: semanaConcluida,
-          casas: {
-            2: {},
-            3: {},
-            4: {},
-            5: {}
-          }
-        };
-
-        // Salva os dados limpos (mantendo a flag)
-        localStorage.setItem(`semana${semanaAtual}Dados`, JSON.stringify(novosDados));
-
-        // Limpar todos os campos do formulário na tela
-        const inputsCasa2 = ['estudanteNome', 'espacoVisitado', 'modalidadeSelecao', 'checkinData', 'localDescricao'];
-        inputsCasa2.forEach(id => {
-          const input = document.getElementById(id);
-          if (input) input.value = '';
-        });
-
-        const imagePreviewEl = document.getElementById('imagePreview');
-        const uploadPlaceholderEl = document.getElementById('uploadPlaceholder');
-        const removeImageBtnEl = document.getElementById('removeImageBtn');
-        if (imagePreviewEl) imagePreviewEl.src = '';
-        if (uploadPlaceholderEl) uploadPlaceholderEl.style.display = 'flex';
-        if (removeImageBtnEl) removeImageBtnEl.style.display = 'none';
-
-        const inputsCasa3 = ['experiencia1Descricao', 'experiencia2Descricao', 'experiencia3Descricao'];
-        inputsCasa3.forEach(id => {
-          const input = document.getElementById(id);
-          if (input) input.value = '';
-        });
-
-        const aprendizadoReflexaoEl = document.getElementById('aprendizadoReflexao');
-        if (aprendizadoReflexaoEl) aprendizadoReflexaoEl.value = '';
-
-        const aplicacaoIdeiasEl = document.getElementById('aplicacaoIdeias');
-        if (aplicacaoIdeiasEl) aplicacaoIdeiasEl.value = '';
-
+        
         btn.innerText = textoOriginal;
         btn.disabled = false;
         

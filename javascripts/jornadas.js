@@ -148,7 +148,6 @@ function atualizarProgressoGeral() {
   const barraFundo = document.querySelector('.barra-fundo');
   
   if (barraFundo) {
-    // Cria ou atualiza a barra de progresso preenchida
     let barraPreenchida = document.querySelector('.barra-preenchida');
     if (!barraPreenchida) {
       barraPreenchida = document.createElement('div');
@@ -158,6 +157,9 @@ function atualizarProgressoGeral() {
     barraPreenchida.style.width = `${porcentagem}%`;
     barraPreenchida.style.transition = 'width 0.5s ease';
   }
+  
+  // RETORNA O TOTAL DE SEMANAS CONCLUÍDAS
+  return totalConcluidas;
 }
 
 // Função para configurar os cards como clicáveis
@@ -183,33 +185,34 @@ function configurarCards() {
 
 // Função para verificar se todas as semanas estão concluídas
 function verificarConclusaoTotal(totalConcluidas) {
-  const botaoConcluirPassaporte = document.querySelector('.btn-action-jornadas:last-child');
+  console.log('Total de semanas concluídas:', totalConcluidas); // DEBUG
   
-  if (totalConcluidas === 7 && botaoConcluirPassaporte) {
-    // Todas as semanas concluídas - habilita botão de concluir passaporte
-    botaoConcluirPassaporte.style.backgroundColor = '#191698';
-    botaoConcluirPassaporte.style.cursor = 'pointer';
-    botaoConcluirPassaporte.style.opacity = '1';
-    
-    // Remove evento antigo e adiciona novo
-    const novoBotao = botaoConcluirPassaporte.cloneNode(true);
-    botaoConcluirPassaporte.parentNode.replaceChild(novoBotao, botaoConcluirPassaporte);
-    
+  const botaoConcluirPassaporte = document.querySelector('.btn-action-jornadas:last-child');
+  console.log('Botão encontrado:', botaoConcluirPassaporte); // DEBUG
+  
+  if (!botaoConcluirPassaporte) return;
+  
+  // Remove qualquer evento anterior clonando o botão
+  const novoBotao = botaoConcluirPassaporte.cloneNode(true);
+  botaoConcluirPassaporte.parentNode.replaceChild(novoBotao, botaoConcluirPassaporte);
+  
+  // Remove qualquer estilo inline que possa ter sido aplicado
+  novoBotao.style.backgroundColor = '';
+  novoBotao.style.cursor = '';
+  novoBotao.style.opacity = '';
+  
+  if (totalConcluidas === 7) {
+    console.log('TODAS CONCLUÍDAS! Habilitando botão...'); // DEBUG
+    // Todas as semanas concluídas - botão funcional
     novoBotao.addEventListener('click', (e) => {
       e.preventDefault();
-      // Aqui você pode redirecionar para a página de conclusão final
       alert('Parabéns! Você concluiu todas as semanas!');
-      // window.location.href = 'conclusao-final.html';
     });
-  } else if (botaoConcluirPassaporte) {
-    // Ainda não completou todas as semanas
-    botaoConcluirPassaporte.style.backgroundColor = '#ccc';
-    botaoConcluirPassaporte.style.cursor = 'not-allowed';
-    botaoConcluirPassaporte.style.opacity = '0.6';
-    
-    const novoBotao = botaoConcluirPassaporte.cloneNode(true);
-    botaoConcluirPassaporte.parentNode.replaceChild(novoBotao, botaoConcluirPassaporte);
-    
+  } else {
+    console.log('FALTAM SEMANAS! Desabilitando botão...'); // DEBUG
+    // Ainda não completou todas as semanas - botão desabilitado
+    novoBotao.style.backgroundColor = '#EBEBE4';
+    novoBotao.style.cursor = 'not-allowed';
     novoBotao.addEventListener('click', (e) => {
       e.preventDefault();
       alert(`Complete todas as 7 semanas primeiro!`);
