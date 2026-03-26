@@ -1,0 +1,89 @@
+.destaque-section h2::before {
+  background-color: #DEDEDE !important;
+}
+
+.box-info {
+  background-color: #DEDEDE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 30px;
+  margin-top: 35px;
+}
+
+.box-info p {
+  text-align: center;
+  width: 70%;
+  margin-top: 10px;
+}
+
+.baixa-portifolio-btn {
+  background-color: #ED6D02;
+  color: #FFF;
+  font-weight: bold;
+  border: 0;
+  outline: none;
+  width: 100%;
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 30px;
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.baixa-portifolio-btn:hover {
+  background-color: #f57c1f;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(237, 109, 2, 0.3);
+}
+
+.baixa-portifolio-btn:focus,
+.baixa-portifolio-btn:focus-visible,
+.baixa-portifolio-btn:active {
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+
+.baixa-portifolio-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 5px rgba(237, 109, 2, 0.3);
+  transition: all 0.05s ease;
+}
+
+.baixa-portifolio-btn i {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.baixa-portifolio-btn:hover i {
+  transform: translateY(2px);
+}
+
+
+
+@media (max-width: 1199px) {
+  .box-info p {
+    width: 75%;
+  }
+}
+
+@media (max-width: 991px) {
+  .box-info p {
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .baixa-portifolio-btn {
+    font-size: 20px;
+  }
+}

@@ -203,10 +203,10 @@ function verificarConclusaoTotal(totalConcluidas) {
   
   if (totalConcluidas === 7) {
     console.log('TODAS CONCLUÍDAS! Habilitando botão...'); // DEBUG
-    // Todas as semanas concluídas - botão funcional
+    // Todas as semanas concluídas - Redireciona pra página Conclusão
     novoBotao.addEventListener('click', (e) => {
       e.preventDefault();
-      alert('Parabéns! Você concluiu todas as semanas!');
+      window.location.href = 'conclusao.html';
     });
   } else {
     console.log('FALTAM SEMANAS! Desabilitando botão...'); // DEBUG
