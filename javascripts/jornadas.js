@@ -185,10 +185,10 @@ function configurarCards() {
 
 // Função para verificar se todas as semanas estão concluídas
 function verificarConclusaoTotal(totalConcluidas) {
-  console.log('Total de semanas concluídas:', totalConcluidas); // DEBUG
+  //console.log('Total de semanas concluídas:', totalConcluidas);
   
   const botaoConcluirPassaporte = document.querySelector('.btn-action-jornadas:last-child');
-  console.log('Botão encontrado:', botaoConcluirPassaporte); // DEBUG
+  //console.log('Botão encontrado:', botaoConcluirPassaporte);
   
   if (!botaoConcluirPassaporte) return;
   
@@ -202,14 +202,14 @@ function verificarConclusaoTotal(totalConcluidas) {
   novoBotao.style.opacity = '';
   
   if (totalConcluidas === 7) {
-    console.log('TODAS CONCLUÍDAS! Habilitando botão...'); // DEBUG
+    //console.log('TODAS CONCLUÍDAS! Habilitando botão...'); 
     // Todas as semanas concluídas - Redireciona pra página Conclusão
     novoBotao.addEventListener('click', (e) => {
       e.preventDefault();
       window.location.href = 'conclusao.html';
     });
   } else {
-    console.log('FALTAM SEMANAS! Desabilitando botão...'); // DEBUG
+    //console.log('FALTAM SEMANAS! Desabilitando botão...');
     // Ainda não completou todas as semanas - botão desabilitado
     novoBotao.style.backgroundColor = '#EBEBE4';
     novoBotao.style.cursor = 'not-allowed';
@@ -222,7 +222,7 @@ function verificarConclusaoTotal(totalConcluidas) {
 
 // Inicializar tudo quando a página carregar
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('Inicializando página de jornadas...');
+  //console.log('Inicializando página de jornadas...');
   
   // Atualiza todos os elementos
   atualizarBarraProgresso();
@@ -231,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
   configurarCards();
   verificarConclusaoTotal(totalConcluidas);
   
-  console.log('Jornadas inicializada!');
+  //console.log('Jornadas inicializada!');
 });
 
 // Opcional: Adicionar evento de armazenamento para atualizar em tempo real
