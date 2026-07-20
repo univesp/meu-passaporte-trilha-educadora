@@ -75,34 +75,72 @@ class SemanaManager {
       });
     }, 0);
   }
-  
-  // Obtém todos os dados salvos
-  getDadosSalvos() {
-    const dados = localStorage.getItem(this.storageKey);
-    return dados ? JSON.parse(dados) : {
-      semanaConcluida: false,
-      casas: {
-        2: {},
-        3: {},
-        4: {},
-        5: {}
-      }
-    };
-  }
-  
-  // Salva todos os dados de uma vez
-  salvarTodosDados() {
-    const dadosCompletos = this.getDadosSalvos();
     
-    for (let i = 2; i <= 5; i++) {
-      const dadosCasa = this.coletarDadosCasa(i);
-      if (dadosCasa && Object.keys(dadosCasa).length > 0) {
-        dadosCompletos.casas[i] = dadosCasa;
+    // Garante que a estrutura SEMPRE existe
+    getDadosSalvos() {
+      try {
+        const dados = localStorage.getItem(this.storageKey);
+        
+        // Estrutura padrão
+        const estruturaPadrao = {
+          semanaConcluida: false,
+          casas: {
+            2: {},
+            3: {},
+            4: {},
+            5: {}
+          }
+        };
+        
+        if (!dados) {
+          return estruturaPadrao;
+        }
+        
+        const parsed = JSON.parse(dados);
+        
+        // Verifica se a estrutura está correta
+        if (!parsed.casas || typeof parsed.casas !== 'object') {
+          console.warn('Estrutura de dados corrompida, recriando...');
+          return estruturaPadrao;
+        }
+        
+        // Garante que todas as casas existem
+        for (let i = 2; i <= 5; i++) {
+          if (!parsed.casas[i] || typeof parsed.casas[i] !== 'object') {
+            parsed.casas[i] = {};
+          }
+        }
+        
+        return parsed;
+        
+      } catch (error) {
+        console.error('Erro ao ler dados do localStorage:', error);
+        return {
+          semanaConcluida: false,
+          casas: {
+            2: {},
+            3: {},
+            4: {},
+            5: {}
+          }
+        };
       }
     }
     
-    localStorage.setItem(this.storageKey, JSON.stringify(dadosCompletos));
-  }
+    // Usa a estrutura garantida
+    salvarTodosDados() {
+      const dadosCompletos = this.getDadosSalvos(); // JÁ VEM COM A ESTRUTURA GARANTIDA
+      
+      for (let i = 2; i <= 5; i++) {
+        const dadosCasa = this.coletarDadosCasa(i);
+        if (dadosCasa && Object.keys(dadosCasa).length > 0) {
+          dadosCompletos.casas[i] = dadosCasa;
+        }
+      }
+      
+      localStorage.setItem(this.storageKey, JSON.stringify(dadosCompletos));
+    }
+  
   
   // Marca a semana como concluída
   marcarSemanaConcluida() {

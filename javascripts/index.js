@@ -426,22 +426,7 @@ function esconderLoading() {
   }
 }
 
-// Quando o DOM estiver pronto, já podemos preparar
-document.addEventListener('DOMContentLoaded', () => {
-  const semanaContent = document.querySelector('.semana-content-box');
-  if (semanaContent) {
-    const semanaMatch = semanaContent.id.match(/semana(\d+)/);
-    const semanaId = semanaMatch ? parseInt(semanaMatch[1]) : 1;
-    
-    const manager = new SemanaManager({
-      semanaId: semanaId,
-      totalCasas: 6,
-      onCasaChange: (casa) => {}
-    });
-    
-    window.semanaManager = manager;
-  }
-});
+
 
 // Quando a página carregar completamente, esconde o loading (respeitando tempo mínimo)
 window.addEventListener('load', () => {
